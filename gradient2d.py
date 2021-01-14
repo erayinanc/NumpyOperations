@@ -1,10 +1,11 @@
-# Efficient gradient of 2D field by Eray Inanc (eray.inanc@uni-due.de)
-# Note: Compute 2D gradient once, replaces numpy.gradient with two axes
-# Libs: import numpy as np
-# Usage: gradients = Grad2D(Field(n^2), delta=<float>
+# efficient gradient of 2D field by Eray Inanc (eray.inanc@uni-due.de)
+# note: Compute 2D gradient once, replaces numpy.gradient with two axes
+# libs: import numpy as np
+# usage: gradients = Grad2D(Field(n^2), delta=<float>), sets delta to 1 m if not given
 # return is a 3D field with gradients[:,:,0] is the axis=0 and gradients[:,:,1] is the axis=1
 # delta is cell size in meters
 
+# gradient of 2D field
 def Grad2D(Field,**kwargs):
     # parameters
     Ima,Kma = Field.shape[:]
