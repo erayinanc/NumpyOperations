@@ -1,9 +1,9 @@
- efficient computation of absolute gradient of 2D field
+# efficient computation of absolute gradient of 3D field
 # mathematical operation |grad(\phi_i)|
 # libs: numpy as np
-# usage: absoluteGradient = Grad2D(Field(n^2), delta=<float>)
+# usage: absoluteGradient = Grad3D(Field(n^3), delta=<float>)
 # note: delta is cell size in meters, sets delta to 1 m if not given
-# return: 2D field with absolute gradient
+# return: 3D field with absolute gradient
 
 # gradient of 3D field
 def Grad3D(Field,**kwargs):
