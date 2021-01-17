@@ -34,6 +34,4 @@ def AGrad2D(Field,**kwargs):
     ABSGrad = np.sqrt(GradF[:,:,0]**2.0 + GradF[:,:,1]**2.0)
     return ABSGrad 
 
-
-
 #EOF
