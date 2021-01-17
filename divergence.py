@@ -26,3 +26,5 @@ def Div(Field,**kwargs):
         (0.5 / delta) * ((Field[1:Ima-1,1:Jma-1,2:Kma,2] - Field[1:Ima-1,1:Jma-1,0:Kma-2,2]))
 
     return Div 
+
+# EOF
