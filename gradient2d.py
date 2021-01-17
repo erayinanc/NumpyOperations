@@ -1,6 +1,7 @@
-# efficient gradient of 2D field by Eray Inanc (eray.inanc@uni-due.de)
+# efficient computation of gradient of 2D field
+# mathematical operation of grad(\phi_i) in 2D
 # note: Compute 2D gradient once, replaces numpy.gradient with two axes
-# libs: import numpy as np
+# libs: numpy as np
 # usage: gradients = Grad2D(Field(n^2), delta=<float>), sets delta to 1 m if not given
 # return is a 3D field with gradients[:,:,0] is the axis=0 and gradients[:,:,1] is the axis=1
 # delta is cell size in meters
