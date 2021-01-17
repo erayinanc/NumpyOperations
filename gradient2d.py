@@ -1,10 +1,9 @@
 # efficient computation of gradient of 2D field
-# mathematical operation of grad(\phi_i) in 2D
-# note: Compute 2D gradient once, replaces numpy.gradient with two axes
+# mathematical operation grad(\phi_i)
 # libs: numpy as np
-# usage: gradients = Grad2D(Field(n^2), delta=<float>), sets delta to 1 m if not given
-# return is a 3D field with gradients[:,:,0] is the axis=0 and gradients[:,:,1] is the axis=1
-# delta is cell size in meters
+# usage: gradients = Grad2D(Field(n^2), delta=<float>)
+# note: delta is cell size in meters, sets delta to 1 m if not given
+# return: 3D field with gradients[:,:,0] is the axis=0 and gradients[:,:,1] is the axis=1
 
 # gradient of 2D field
 def Grad2D(Field,**kwargs):
