@@ -1,9 +1,9 @@
-# efficient absolute gradient of 2D field by Eray Inanc (eray.inanc@uni-due.de)
-# note: Compute 2D gradient once, and uses that to compute \nabla \dot Field
-# libs: import numpy as np
-# usage: absoluteGradient = Grad2D(Field(n^2), delta=<float>), sets delta to 1 m if not given
-# return is a 2D field with absolute gradient
-# delta is cell size in meters
+# efficient computation of absolute gradient of 2D field
+# mathematical operation |grad(\phi_i)|
+# libs: numpy as np
+# usage: absoluteGradient = Grad2D(Field(n^2), delta=<float>)
+# note: delta is cell size in meters, sets delta to 1 m if not given
+# return: 2D field with absolute gradient
 
 # gradient of 2D field
 def Grad2D(Field,delta):
