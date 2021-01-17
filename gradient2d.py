@@ -15,7 +15,7 @@ def Grad2D(Field,**kwargs):
         print('delta is set to 1 m')
 
     # allocate
-    Grad = np.zeros((Ima+2,Kma+2,2))
+    Grad = np.zeros((Ima,Kma,2))
 
     # compute 
     Grad[1:Ima-1,1:Kma-1,0] = (0.5 / delta) * \
