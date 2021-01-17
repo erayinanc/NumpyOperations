@@ -1,0 +1,30 @@
+# efficient computation of gradient of 3D field
+# mathematical operation grad(\phi_i)
+# libs: numpy as np
+# usage: gradients = Grad3D(Field(n^3), delta=<float>)
+# note: delta is cell size in meters, sets delta to 1 m if not given
+# return: 4D field with gradients[:,:,:,2] is the axis=2, etc.
+
+# gradient of 3D field
+def Grad3D(Field,**kwargs):
+    # parameters
+    Ima,Jma,Kma = Field.shape[:]
+    delta = kwargs.get('delta', None)
+    if not isinstance(delta, float):
+        delta = 1.0
+        print('delta is set to 1 m')
+
+    # allocate
+    Grad = np.zeros((Ima,Jma,Kma,3))
+
+    # compute 
+    Grad[1:Ima-1,1:Jma-1,1:Kma-1,0] = (0.5 / delta) * \
+        ((Field[2:Ima,1:Jma-1,1:Kma-1] - Field[0:Ima-2,1:Jma-1,1:Kma-1]))
+    Grad[1:Ima-1,1:Jma-1,1:Kma-1,1] = (0.5 / delta) * \
+        ((Field[1:Ima-1,2:Jma,1:Kma-1] - Field[1:Ima-1,0:Jma-2,1:Kma-1]))
+    Grad[1:Ima-1,1:Jma-1,1:Kma-1,2] = (0.5 / delta) * \
+        ((Field[1:Ima-1,1:Jma-1,2:Kma] - Field[1:Ima-1,1:Jma-1,0:Kma-2])) 
+    
+    return Grad 
+
+#EOF
