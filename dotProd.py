@@ -14,7 +14,7 @@ def DotP(Field1,Field2):
     
     # compute 
     Dot += Field1[:,:,:,0] * Field2[:,:,:,0]
-    Dot += Field1[:,:,:,1] * Field2[:,:,:,0]
+    Dot += Field1[:,:,:,1] * Field2[:,:,:,1]
     Dot += Field1[:,:,:,2] * Field2[:,:,:,2]
     
     return Dot  
