@@ -28,6 +28,7 @@ def AGrad3D(Field):
     # compute 
     GradF = Grad3D(Field,delta)
     ABSGrad = np.sqrt(GradF[:,:,:,0]**2.0 + GradF[:,:,:,1]**2.0 + GradF[:,:,:,2]**2.0)
+    
     return ABSGrad
 
 # Compute normal vector N = -grad(Yp)/absgrad(Yp)
