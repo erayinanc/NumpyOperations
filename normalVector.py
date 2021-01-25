@@ -31,7 +31,7 @@ def AGrad3D(Field):
     
     return ABSGrad
 
-# Compute normal vector N = -grad(Yp)/absgrad(Yp)
+# Compute normal vector
 def normalVec(Field):
     # parameters
     Ima,Jma,Kma = Field.shape[:]
