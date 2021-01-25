@@ -6,7 +6,7 @@
 # return: 3D field with absolute gradient
 
 # gradient of 3D field
-def Grad3D(Field,**kwargs):
+def Grad3D(Field,delta):
     # parameters
     Ima,Jma,Kma = Field.shape[:]
    
